@@ -20,8 +20,7 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
-    //   const product = products.find((p) => p._id === req.params.id);
-    const product = await Product.findById(req.param.id);
+    const product = await Product.findById(req.params.id);
 
     if (product) {
       res.json(product);
